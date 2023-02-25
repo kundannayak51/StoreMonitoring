@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = 'Import data from a CSV file'
 
     def add_arguments(self, parser):
-        parser.add_argument('csvfile', help='Path to the CSV file')
+        parser.add_argument('csvfile', help='./business_hours.csv')
 
     def handle(self, *args, **options):
         with open(options['csvfile'], 'r') as csvfile:
